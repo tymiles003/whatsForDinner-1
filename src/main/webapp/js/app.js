@@ -1,10 +1,11 @@
 'use strict';
 
-angular.module('whatsfordinnerApp.index', ['ngResource']);
+angular.module('whatsForDinnerApp.index', ['ngResource']);
+angular.module('whatsForDinnerApp.dish', ['ngResource']);
 
-var whatsfordinnerApp = angular.module('whatsfordinnerApp', ['ui.bootstrap', 'ngResource', 'ui.router', 'whatsfordinnerApp.index']);
+var whatsForDinnerApp = angular.module('whatsForDinnerApp', ['ui.bootstrap', 'ngResource', 'ui.router', 'whatsForDinnerApp.index', 'whatsForDinnerApp.dish']);
 
-whatsfordinnerApp.config(function($stateProvider, $urlRouterProvider) {
+whatsForDinnerApp.config(function($stateProvider, $urlRouterProvider) {
     $urlRouterProvider.otherwise('/');
     $stateProvider.state('site', {
         'abstract': true,

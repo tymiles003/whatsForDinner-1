@@ -1,10 +1,9 @@
 'use strict';
 
-var index = angular.module('whatsfordinnerApp.index');
+var index = angular.module('whatsForDinnerApp.index');
 
-index.controller('indexController', ['$scope', 'indexResourceFactory', function ($scope, mainResourceFactory) {
-    mainResourceFactory.getAllDishes({}, function(result) {
-        console.log(result);
+index.controller('indexController', ['$scope', 'dishResourceFactory', function ($scope, dishResourceFactory) {
+    dishResourceFactory.getAllDishes({}, function(result) {
         $scope.dishes = result;
     });
 }]);

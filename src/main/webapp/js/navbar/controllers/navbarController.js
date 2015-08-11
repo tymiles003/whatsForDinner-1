@@ -1,5 +1,5 @@
 'use strict';
 
-angular.module('whatsfordinnerApp').controller('navbarController', function ($scope, $state) {
+angular.module('whatsForDinnerApp').controller('navbarController', function ($scope, $state) {
     $scope.$state = $state;
 });

@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('whatsfordinnerApp.index').config(function($stateProvider) {
+angular.module('whatsForDinnerApp.index').config(function($stateProvider) {
     $stateProvider.state('index', {
         parent: 'site',
         url: '/',

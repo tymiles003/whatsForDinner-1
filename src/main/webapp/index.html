@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" href="../../favicon.ico" />
+        <title>What's For Dinner</title>
+        <!-- Bootstrap core CSS -->
+        <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css" />
+        <!-- Custom styles for this template -->
+        <link rel="stylesheet" href="assets/styles/dashboard.css" />
+        <link rel="stylesheet" href="assets/styles/typeahead.css" />
+        <!-- jQuery -->
+        <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    </head>
+    <body ng-app="whatsfordinnerApp">
+        <nav ui-view="navbar" ng-cloak=""></nav>
+        <div class="main" ui-view="content">
+        </div>
+        <!-- build:js scripts/vendor.js -->
+        <!-- bower:js -->
+        <script src="bower_components/angular/angular.js"></script>
+        <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+        <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+        <script src="bower_components/angular-resource/angular-resource.js"></script>
+        <script src="bower_components/angular-cookies/angular-cookies.js"></script>
+        <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+        <script src="bower_components/angular-translate/angular-translate.js"></script>
+        <script src="bower_components/messageformat/messageformat.js"></script>
+        <script src="bower_components/angular-translate-interpolation-messageformat/angular-translate-interpolation-messageformat.js"></script>
+        <script src="bower_components/angular-translate-storage-cookie/angular-translate-storage-cookie.js"></script>
+        <script src="bower_components/angular-translate-loader-partial/angular-translate-loader-partial.js"></script>
+        <script src="bower_components/angular-dynamic-locale/src/tmhDynamicLocale.js"></script>
+        <script src="bower_components/angular-local-storage/dist/angular-local-storage.js"></script>
+        <script src="bower_components/angular-cache-buster/angular-cache-buster.js"></script>
+        <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+        <script src="bower_components/bootstrap/js/alert.js"></script>
+        <script src="bower_components/modernizr/modernizr.js"></script>
+        <script src="bower_components/ngInfiniteScroll/build/ng-infinite-scroll.js"></script>
+        <script src="bower_components/ng-file-upload/ng-file-upload.js"></script>
+        <script src="bower_components/sockjs-client/dist/sockjs.js"></script>
+        <script src="bower_components/stomp-websocket/lib/stomp.min.js"></script>
+        <script src="bower_components/typeahead.js/dist/typeahead.jquery.min.js"></script>
+        <script src="assets/javascript/global.js"></script>
+        <!-- endbower -->
+        <!-- endbuild -->
+        <!-- build:js({.tmp,src/main/webapp}) js/app.js -->
+        <script src="js/app.js"></script>
+        <script src="js/main/main.js"></script>
+        <script src="js/main/controllers/indexController.js"></script>
+        <script src="js/main/services/indexResourceFactory.js"></script>
+        <script src="js/navbar/controllers/navbarController.js"></script>
+        <!-- endbuild -->
+    </body>
+</html>

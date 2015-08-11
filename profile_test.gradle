@@ -1,0 +1,5 @@
+apply plugin: 'java'
+
+test {
+    systemProperty 'spring.profiles.active', 'test'
+}

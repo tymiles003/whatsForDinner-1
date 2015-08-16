@@ -1,12 +1,12 @@
 'use strict';
 
 angular.module('whatsForDinnerApp.dish')
-    .controller('dishController', ['$scope', 'dishResourceFactory', function ($scope, dishResourceFactory) {
+    .controller('dishController', ['$scope', 'dishResourceFactory', 'paginationService', function ($scope, dishResourceFactory, paginationService) {
         dishResourceFactory.getAllDishes({}, function(result) {
-            $scope.totalDishes = 20;
-            $scope.currentPage = 1;
-            $scope.numPerPage = 10;
-            $scope.maxSize = 5;
+            $scope.totalDishes = result.length;
+            $scope.currentPage = paginationService.beginPage;
+            $scope.numPerPage = paginationService.numPerPage;
+            $scope.maxSize = paginationService.maxSize;
 
             $scope.$watch('currentPage + numPerPage', function() {
                 var begin = (($scope.currentPage - 1) * $scope.numPerPage);

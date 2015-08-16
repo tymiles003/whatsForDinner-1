@@ -1,7 +1,8 @@
 'use strict';
 
+angular.module('whatsForDinnerApp.common', [])
 angular.module('whatsForDinnerApp.index', ['ngResource']);
-angular.module('whatsForDinnerApp.dish', ['ngResource']);
+angular.module('whatsForDinnerApp.dish', ['ngResource', 'whatsForDinnerApp.common']);
 
 var whatsForDinnerApp = angular.module('whatsForDinnerApp', ['ui.bootstrap', 'ngResource', 'ui.router', 'whatsForDinnerApp.index', 'whatsForDinnerApp.dish']);
 

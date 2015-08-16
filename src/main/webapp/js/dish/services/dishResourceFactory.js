@@ -1,11 +1,11 @@
 'use strict';
 
 angular.module('whatsForDinnerApp.dish')
-    .factory('dishResourceFactory', function($resource) {
+    .factory('dishResourceFactory', ['$resource', function($resource) {
         return $resource('api/dishes', {}, {
             getAllDishes: {
                 method: 'GET',
                 isArray: true
             }
         });
-    });
+    }]);

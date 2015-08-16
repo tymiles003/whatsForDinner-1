@@ -7,22 +7,27 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="/">What's For Dinner</a>
+            <a class="navbar-brand" ui-sref="index">What's For Dinner</a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
-                <li class="active dropdown">
-                    <a ui-sref="index" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="true">Dishes <span class="caret"></span></a>
+                <li ui-sref-active='active' class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="true">Dishes <span class="caret"></span></a>
                     <ul class="dropdown-menu" role="menu">
                         <li><a ui-sref="dishes">Dishes</a></li>
-                        <li><a href="/menu">Week menu</a></li>
                     </ul>
                 </li>
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="true">Ingredients <span class="caret"></span></a>
+                <li ui-sref-active='active' class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="true">Ingredients <span class="caret"></span></a>
                     <ul class="dropdown-menu" role="menu">
                         <li><a href="/ingredient">Ingredients</a></li>
                         <li><a href="/ingredient/unit">Units</a></li>
+                    </ul>
+                </li>
+                <li ui-sref-active='active' class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="true">Menus <span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="/menu">Week menu</a></li>
                     </ul>
                 </li>
             </ul>

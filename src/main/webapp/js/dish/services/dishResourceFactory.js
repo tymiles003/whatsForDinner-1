@@ -6,6 +6,9 @@ angular.module('whatsForDinnerApp.dish')
             getAllDishes: {
                 method: 'GET',
                 isArray: true
+            },
+            addDish: {
+                method: 'POST'
             }
         });
     }]);

@@ -8,19 +8,24 @@
         <title>What's For Dinner</title>
         <!-- Bootstrap core CSS -->
         <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css" />
+        <!-- Angular flash alert -->
+        <link rel="stylesheet" href="bower_components/angular-flash-alert/dist/angular-flash.css" />
         <!-- Custom styles for this template -->
         <link rel="stylesheet" href="assets/styles/dashboard.css" />
+        <link rel="stylesheet" href="assets/styles/customAlerts.css" />
         <link rel="stylesheet" href="assets/styles/typeahead.css" />
         <!-- jQuery -->
         <script src="bower_components/jquery/dist/jquery.min.js"></script>
     </head>
     <body ng-app="whatsForDinnerApp">
         <nav ui-view="navbar" ng-cloak=""></nav>
+        <div flash-message="5000" ></div>
         <div class="main" ui-view="content">
         </div>
         <!-- build:js scripts/vendor.js -->
         <!-- bower:js -->
         <script src="bower_components/angular/angular.js"></script>
+        <script src="bower_components/angular-animate/angular-animate.js"></script>
         <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
         <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
         <script src="bower_components/angular-resource/angular-resource.js"></script>
@@ -42,6 +47,7 @@
         <script src="bower_components/sockjs-client/dist/sockjs.js"></script>
         <script src="bower_components/stomp-websocket/lib/stomp.min.js"></script>
         <script src="bower_components/typeahead.js/dist/typeahead.jquery.min.js"></script>
+        <script src="bower_components/angular-flash-alert/dist/angular-flash.min.js"></script>
         <script src="assets/javascript/global.js"></script>
         <!-- endbower -->
         <!-- endbuild -->

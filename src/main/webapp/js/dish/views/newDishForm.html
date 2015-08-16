@@ -1,0 +1,32 @@
+<h1 class="page-header">New Dish</h1>
+<form name="form" novalidate class="form-horizontal" ng-submit="form.$valid && addDish()">
+    <legend>Dish Information</legend>
+    <div class="form-group" ng-class="{'has-error has-feedback' : form.$submitted && form.dishName.$error.required}">
+        <label class="col-sm-2 control-label">Dish name</label>
+        <div class="col-sm-4">
+            <input class="form-control" type="text" placeholder="Dish name" ng-model="dish.name" name="dishName" required=""/>
+            <div ng-show="form.$submitted && form.dishName.$error.required">
+                <span class="glyphicon glyphicon-remove form-control-feedback" aria-hidden="true"></span>
+                <label class="control-label">Dish name is required</label>
+            </div>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-sm-2 control-label">Recipe</label>
+        <div class="col-sm-4">
+            <textarea class="form-control" rows="5" placeholder="Recipe"></textarea>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-sm-2 control-label">Remarks</label>
+        <div class="col-sm-4">
+            <textarea class="form-control" rows="5" placeholder="Remarks"></textarea>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="col-sm-offset-0 col-sm-4">
+            <button type="submit" class="btn btn-default">Submit</button>
+        </div>
+    </div>
+</form>

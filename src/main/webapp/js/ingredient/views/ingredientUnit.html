@@ -1,0 +1,22 @@
+<div ng-cloak>
+    <div class="table-responsive" ng-init="getAllIngredientUnits()">
+        <h1 class="page-header">Ingredient Units</h1><a style="float:right" class="btn btn-primary" ui-sref="addIngredientUnit" role="button">New Ingredient unit</a>
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th>Name</th>
+                <th>Created at</th>
+                <th>Last modified</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr ng-repeat="ingredientUnit in ingredientUnits">
+                <td>{{ ingredientUnit.name }}</td>
+                <td>{{ ingredientUnit.creationDate }}</td>
+                <td>{{ ingredientUnit.lastModifiedDate }}</td>
+            </tr>
+            </tbody>
+        </table>
+        <pagination ng-model="currentPage" total-items="totalIngredientUnits" max-size="maxSize" boundary-links="true"></pagination>
+    </div>
+</div>

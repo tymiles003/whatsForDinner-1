@@ -22,4 +22,24 @@ angular.module('whatsForDinnerApp.ingredient')
                 }
             }
         });
+        $stateProvider.state('ingredientUnits', {
+            parent: 'ingredients',
+            url: '/units',
+            views: {
+                'content@': {
+                    templateUrl: 'js/ingredient/views/ingredientUnit.html',
+                    controller: 'ingredientUnitController'
+                }
+            }
+        });
+        $stateProvider.state('addIngredientUnit', {
+            parent: 'ingredientUnits',
+            url: '/add',
+            views: {
+                'content@': {
+                    templateUrl: 'js/ingredient/views/newIngredientUnitForm.html',
+                    controller: 'ingredientUnitController'
+                }
+            }
+        });
 });

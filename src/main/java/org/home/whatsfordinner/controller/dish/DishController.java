@@ -23,7 +23,7 @@ public class DishController {
     }
 
     @RequestMapping(method = RequestMethod.POST)
-    public Dish saveDish(@RequestBody final Dish dish) {
+    public Dish addDish(@RequestBody final Dish dish) {
         System.out.println(dish.getName());
         return dish;
     }

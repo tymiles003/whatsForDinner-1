@@ -21,7 +21,7 @@ angular.module('whatsForDinnerApp.common')
         };*/
 
         var defaults = {
-            templateUrl: null,
+            templateUrl: 'js/common/views/deleteModal.html',
             title: 'Default Modal Title',
             backdrop: true,
             success: {label: 'Ok', fn: null},
@@ -30,7 +30,7 @@ angular.module('whatsForDinnerApp.common')
             size: 'm'
         };
 
-        var createModal = function(templateUrl, options) {
+        var createModal = function(options) {
             options = angular.extend({}, defaults, options);
             var scope = options.scope || $rootScope.$new();
             scope.modalCancelLabel = options.cancel.label;
@@ -51,7 +51,7 @@ angular.module('whatsForDinnerApp.common')
             };
             var modalInstance = $modal.open({
                 animation: true,
-                templateUrl: templateUrl,
+                templateUrl: options.templateUrl,
                 controller: options.controller,
                 scope: scope,
                 size: 'm'

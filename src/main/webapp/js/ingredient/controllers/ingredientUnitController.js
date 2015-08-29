@@ -18,7 +18,7 @@ angular.module('whatsForDinnerApp.ingredient')
         };
 
         $scope.deleteIngredientUnitModal = function(id) {
-            modalFactory.createModal('js/ingredient/views/deleteIngredientUnitModal.html', {
+            modalFactory.createModal({
                 id: 'deleteIngredientModal',
                 title: 'Delete ingredient unit',
                 backdrop: true,

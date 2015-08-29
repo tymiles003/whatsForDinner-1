@@ -5,6 +5,7 @@ import org.home.whatsfordinner.domain.ingredient.IngredientUnit;
 import org.home.whatsfordinner.service.ingredient.IngredientService;
 import org.home.whatsfordinner.service.ingredient.IngredientUnitService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -39,6 +40,11 @@ public class IngredientController {
     @RequestMapping(value = "/units", method = RequestMethod.POST)
     public IngredientUnit addIngredientUnit(@RequestBody final IngredientUnit ingredientUnit) {
         return ingredientUnitService.saveIngredientUnit(ingredientUnit);
+    }
+
+    @RequestMapping(value = "/units/{id}", method = RequestMethod.DELETE)
+    public void deleteIngredientUnit(@PathVariable(value = "id") final Long id) {
+        ingredientUnitService.deleteIngredientUnit(id);
     }
 
 }

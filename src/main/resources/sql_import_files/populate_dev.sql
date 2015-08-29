@@ -32,6 +32,13 @@ insert into ingredient_unit (id,name,creation_date,last_modified_date) values (3
 insert into ingredient_unit (id,name,creation_date,last_modified_date) values (4,'kg','2015-05-25T14:30:36.569+02:00','2015-05-25T14:30:36.569+02:00');
 insert into ingredient_unit (id,name,creation_date,last_modified_date) values (5,'ml','2015-05-25T14:30:36.569+02:00','2015-05-25T14:30:36.569+02:00');
 insert into ingredient_unit (id,name,creation_date,last_modified_date) values (6,'liter','2015-05-25T14:30:36.569+02:00','2015-05-25T14:30:36.569+02:00');
+insert into ingredient_unit (id,name,creation_date,last_modified_date) values (7,'deciliter','2015-05-25T14:30:36.569+02:00','2015-05-25T14:30:36.569+02:00');
+insert into ingredient_unit (id,name,creation_date,last_modified_date) values (8,'milliliter','2015-05-25T14:30:36.569+02:00','2015-05-25T14:30:36.569+02:00');
+insert into ingredient_unit (id,name,creation_date,last_modified_date) values (9,'dg','2015-05-25T14:30:36.569+02:00','2015-05-25T14:30:36.569+02:00');
+insert into ingredient_unit (id,name,creation_date,last_modified_date) values (10,'something','2015-05-25T14:30:36.569+02:00','2015-05-25T14:30:36.569+02:00');
+insert into ingredient_unit (id,name,creation_date,last_modified_date) values (11,'else','2015-05-25T14:30:36.569+02:00','2015-05-25T14:30:36.569+02:00');
+insert into ingredient_unit (id,name,creation_date,last_modified_date) values (12,'number 12','2015-05-25T14:30:36.569+02:00','2015-05-25T14:30:36.569+02:00');
+insert into ingredient_unit (id,name,creation_date,last_modified_date) values (13,'last','2015-05-25T14:30:36.569+02:00','2015-05-25T14:30:36.569+02:00');
 
 insert into menu_dish (id,dish,menu,creation_date,last_modified_date) values (1,1,1,'2015-06-15T20:02:55.000+0200','2015-06-15T20:02:55.000+0200');
 insert into menu_dish (id,dish,menu,creation_date,last_modified_date) values (2,2,2,'2015-06-15T20:02:55.000+0200','2015-06-15T20:02:55.000+0200');

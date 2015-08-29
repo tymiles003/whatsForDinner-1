@@ -20,9 +20,14 @@ public class IngredientUnitService {
      *
      * @param id
      * @return the ingredientUnit with the given id or {@literal null} if none found
+     * @throws EntityNotFoundException when the ingredientUnit with id is not found
      */
     public IngredientUnit getIngredientUnit(final Long id) {
-        return ingredientUnitRepository.findOne(id);
+        final IngredientUnit ingredientUnit = ingredientUnitRepository.findOne(id);
+        if (ingredientUnit == null) {
+            throw new EntityNotFoundException("Entity with id " + id + " was not found.");
+        }
+        return ingredientUnit;
     }
 
     /**
@@ -54,11 +59,18 @@ public class IngredientUnitService {
      */
     public IngredientUnit updateIngredientUnit(final Long id, final IngredientUnit newIngredientUnit) {
         final IngredientUnit ingredientUnit = getIngredientUnit(id);
-        if (ingredientUnit == null) {
-            throw new EntityNotFoundException("Entity with id " + id + " was not found.");
-        }
         final IngredientUnit updatedIngredientUnit = IngredientUnitHelper.updateIngredientUnit(ingredientUnit, newIngredientUnit);
         return ingredientUnitRepository.saveAndFlush(updatedIngredientUnit);
     }
 
+    /**
+     * Delete the ingredientUnit with id id
+     *
+     * @param id
+     * @throws EntityNotFoundException when the ingredientUnit with id is not found
+     */
+    public void deleteIngredientUnit(Long id) {
+        final IngredientUnit ingredientUnit = getIngredientUnit(id);
+        ingredientUnitRepository.delete(ingredientUnit);
+    }
 }

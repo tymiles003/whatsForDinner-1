@@ -16,7 +16,7 @@
                 <td>{{ ingredientUnit.creationDate }}</td>
                 <td>{{ ingredientUnit.lastModifiedDate }}</td>
                 <td>
-                    <a class="link--text table__actions__item" role="button" ng-click="openModal()"><i class="glyphicon glyphicon-edit" aria-hidden="true"></i> Edit</a>
+                    <a class="link--text table__actions__item" role="button" ui-sref="editIngredientUnit({id: ingredientUnit.id})"><i class="glyphicon glyphicon-edit" aria-hidden="true"></i> Edit</a>
                     <a class="link--text link--danger table__actions__item" role="button" ng-click="deleteIngredientUnitModal(ingredientUnit.id)"><i class="glyphicon glyphicon-remove" aria-hidden="true"></i> Delete</a>
                 </td>
             </tr>

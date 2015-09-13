@@ -6,17 +6,6 @@ angular.module('whatsForDinnerApp.ingredient')
             getAllIngredientUnits();
         };
 
-        $scope.addIngredientUnit  = function() {
-            ingredientUnitResourceFactory.addIngredientUnit($scope.ingredientUnit, function(result) {
-                var message = "<strong>Success!</strong> The ingredient unit was successfully added.";
-                Flash.create('success', message, 'customAlert success');
-                $state.go('ingredientUnits');
-            }, function(error) {
-                var message = "<strong>Something went wrong!</strong> Status: " + error.status + "<br/> Message: "  +error.data.message;
-                Flash.create('danger', message, 'customAlert danger');
-            });
-        };
-
         $scope.deleteIngredientUnitModal = function(id) {
             modalFactory.createModal({
                 id: 'deleteIngredientModal',
@@ -56,4 +45,6 @@ angular.module('whatsForDinnerApp.ingredient')
                 });
             });
         };
+
+        $scope.getAllIngredientUnits();
     }]);

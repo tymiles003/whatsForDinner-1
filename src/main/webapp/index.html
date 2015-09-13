@@ -17,7 +17,7 @@
         <!-- jQuery -->
         <script src="bower_components/jquery/dist/jquery.min.js"></script>
     </head>
-    <body ng-app="whatsForDinnerApp">
+    <body ng-cloak ng-app="whatsForDinnerApp">
         <nav ui-view="navbar" ng-cloak=""></nav>
         <div flash-message="5000" ></div>
         <div class="main" ui-view="content">
@@ -61,7 +61,9 @@
         <script src="js/dish/services/dishResourceFactory.js"></script>
         <script src="js/ingredient/ingredient.js"></script>
         <script src="js/ingredient/controllers/ingredientController.js"></script>
-        <script src="js/ingredient/controllers/ingredientUnitController.js"></script>
+        <script src="js/ingredient/controllers/unit/ingredientUnitController.js"></script>
+        <script src="js/ingredient/controllers/unit/ingredientUnitCreateController.js"></script>
+        <script src="js/ingredient/controllers/unit/ingredientUnitEditController.js"></script>
         <script src="js/ingredient/services/ingredientResourceFactory.js"></script>
         <script src="js/ingredient/services/ingredientUnitResourceFactory.js"></script>
         <script src="js/main/main.js"></script>

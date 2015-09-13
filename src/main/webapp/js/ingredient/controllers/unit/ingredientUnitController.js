@@ -1,7 +1,9 @@
 'use strict';
 
 angular.module('whatsForDinnerApp.ingredient')
-    .controller('ingredientUnitController', ['$scope', '$state', 'ingredientUnitResourceFactory', 'paginationService', 'Flash', 'modalFactory', function ($scope, $state, ingredientUnitResourceFactory, paginationService, Flash, modalFactory) {
+    .controller('ingredientUnitController', ['$scope', '$state', 'ingredientUnitResourceFactory', 'paginationService', 'Flash', 'modalFactory', 'dateTimeFormat', function ($scope, $state, ingredientUnitResourceFactory, paginationService, Flash, modalFactory, dateTimeFormat) {
+        $scope.dateTimeFormat = dateTimeFormat;
+
         $scope.getAllIngredientUnits = function() {
             getAllIngredientUnits();
         };

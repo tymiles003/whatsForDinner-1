@@ -2,6 +2,7 @@
 
 angular.module('whatsForDinnerApp.ingredient')
     .controller('ingredientUnitCreateController', ['$scope', '$state', 'ingredientUnitResourceFactory', 'Flash', function ($scope, $state, ingredientUnitResourceFactory, Flash) {
+        $scope.ingredientUnit = {};
         $scope.addIngredientUnit = function() {
             ingredientUnitResourceFactory.addIngredientUnit($scope.ingredientUnit, function(result) {
                 var message = "<strong>Success!</strong> The ingredient unit was successfully added.";

@@ -19,3 +19,5 @@ whatsForDinnerApp.config(function($stateProvider, $urlRouterProvider) {
         }
     });
 })
+
+whatsForDinnerApp.value('dateTimeFormat', 'dd-MM-yyyy HH:mm:ss')

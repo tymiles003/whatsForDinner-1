@@ -13,8 +13,8 @@
             <tbody>
             <tr ng-repeat="ingredientUnit in ingredientUnits">
                 <td>{{ ingredientUnit.name }}</td>
-                <td>{{ ingredientUnit.creationDate }}</td>
-                <td>{{ ingredientUnit.lastModifiedDate }}</td>
+                <td>{{ ingredientUnit.creationDate | date: dateTimeFormat }}</td>
+                <td>{{ ingredientUnit.lastModifiedDate | date: dateTimeFormat }}</td>
                 <td>
                     <a class="link--text table__actions__item" role="button" ui-sref="editIngredientUnit({id: ingredientUnit.id})"><i class="glyphicon glyphicon-edit" aria-hidden="true"></i> Edit</a>
                     <a class="link--text link--danger table__actions__item" role="button" ng-click="deleteIngredientUnitModal(ingredientUnit.id)"><i class="glyphicon glyphicon-remove" aria-hidden="true"></i> Delete</a>

@@ -58,8 +58,13 @@ public class IngredientUnitService {
      * @throws EntityNotFoundException when the ingredientUnit with id is not found
      */
     public IngredientUnit updateIngredientUnit(final Long id, final IngredientUnit newIngredientUnit) {
+        System.out.println("--------------------------------------------------- " + id);
+        System.out.println(newIngredientUnit.getName());
+        System.out.println(newIngredientUnit.getId());
         final IngredientUnit ingredientUnit = getIngredientUnit(id);
         final IngredientUnit updatedIngredientUnit = IngredientUnitHelper.updateIngredientUnit(ingredientUnit, newIngredientUnit);
+        System.out.println(updatedIngredientUnit.getName());
+        System.out.println(updatedIngredientUnit.getId());
         return ingredientUnitRepository.saveAndFlush(updatedIngredientUnit);
     }
 

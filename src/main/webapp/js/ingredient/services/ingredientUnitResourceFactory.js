@@ -8,11 +8,14 @@ angular.module('whatsForDinnerApp.ingredient')
                 isArray: true
             },
             addIngredientUnit: {
-                dataType: 'json',
                 method: 'POST'
             },
             getIngredientUnit: {
                 method: 'GET',
+                params: { id: "@id"}
+            },
+            editIngredientUnit: {
+                method: 'PUT',
                 params: { id: "@id"}
             },
             deleteIngredientUnit: {

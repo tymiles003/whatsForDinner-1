@@ -39,19 +39,22 @@ public class IngredientController {
 
     @RequestMapping(value = "/units", method = RequestMethod.POST)
     public IngredientUnit addIngredientUnit(@RequestBody final IngredientUnit ingredientUnit) {
-        System.out.println("---------------------------------------------------------------------------");
-        System.out.println(ingredientUnit);
         return ingredientUnitService.saveIngredientUnit(ingredientUnit);
-    }
-
-    @RequestMapping(value = "/units/{id}", method = RequestMethod.DELETE)
-    public void deleteIngredientUnit(@PathVariable(value = "id") final Long id) {
-        ingredientUnitService.deleteIngredientUnit(id);
     }
 
     @RequestMapping(value = "/units/{id}", method = RequestMethod.GET)
     public IngredientUnit getIngredientUnit(@PathVariable(value = "id") final Long id) {
         return ingredientUnitService.getIngredientUnit(id);
+    }
+
+    @RequestMapping(value = "/units/{id}", method = RequestMethod.PUT)
+    public void editIngredientUnit(@RequestBody final IngredientUnit ingredientUnit, @PathVariable(value = "id") final Long id) {
+        ingredientUnitService.updateIngredientUnit(id, ingredientUnit);
+    }
+
+    @RequestMapping(value = "/units/{id}", method = RequestMethod.DELETE)
+    public void deleteIngredientUnit(@PathVariable(value = "id") final Long id) {
+        ingredientUnitService.deleteIngredientUnit(id);
     }
 
 }

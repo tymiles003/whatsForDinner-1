@@ -5,9 +5,9 @@ angular.module('whatsForDinnerApp.index', ['whatsForDinnerApp.common']);
 angular.module('whatsForDinnerApp.dish', ['whatsForDinnerApp.common']);
 angular.module('whatsForDinnerApp.ingredient', ['whatsForDinnerApp.common']);
 
-var whatsForDinnerApp = angular.module('whatsForDinnerApp', ['ui.bootstrap', 'ngResource', 'ui.router', 'whatsForDinnerApp.index', 'whatsForDinnerApp.dish', 'whatsForDinnerApp.ingredient']);
+var whatsForDinnerApp = angular.module('whatsForDinnerApp', ['ui.bootstrap', 'ngResource', 'ui.router', 'whatsForDinnerApp.index', 'whatsForDinnerApp.dish', 'whatsForDinnerApp.ingredient', 'angular-loading-bar']);
 
-whatsForDinnerApp.config(function($stateProvider, $urlRouterProvider) {
+whatsForDinnerApp.config(function($stateProvider, $urlRouterProvider, cfpLoadingBarProvider) {
     $urlRouterProvider.otherwise('/');
     $stateProvider.state('site', {
         'abstract': true,
@@ -18,6 +18,7 @@ whatsForDinnerApp.config(function($stateProvider, $urlRouterProvider) {
             }
         }
     });
+    cfpLoadingBarProvider.includeSpinner = false;
 })
 
 whatsForDinnerApp.value('dateTimeFormat', 'dd-MM-yyyy HH:mm:ss')

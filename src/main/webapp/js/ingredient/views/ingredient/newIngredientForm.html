@@ -1,0 +1,4 @@
+<h1 class="page-header">New Ingredient</h1>
+<form name="form" novalidate class="form-horizontal" ng-submit="form.$valid && addIngredient()">
+    <div ng-include src="'js/ingredient/views/ingredient/ingredientForm.html'" ng-model="ingredient"></div>
+</form>

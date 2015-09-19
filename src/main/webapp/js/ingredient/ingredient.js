@@ -7,7 +7,7 @@ angular.module('whatsForDinnerApp.ingredient')
             url: '/ingredients',
             views: {
                 'content@': {
-                    templateUrl: 'js/ingredient/views/ingredient.html',
+                    templateUrl: 'js/ingredient/views/ingredient/ingredient.html',
                     controller: 'ingredientController'
                 }
             }
@@ -17,14 +17,24 @@ angular.module('whatsForDinnerApp.ingredient')
             url: '/add',
             views: {
                 'content@': {
-                    templateUrl: 'js/ingredient/views/newIngredientForm.html',
-                    controller: 'ingredientController'
+                    templateUrl: 'js/ingredient/views/ingredient/newIngredientForm.html',
+                    controller: 'ingredientCreateController'
+                }
+            }
+        });
+        $stateProvider.state('editIngredient', {
+            parent: 'ingredients',
+            url: '/:id',
+            views: {
+                'content@': {
+                    templateUrl: 'js/ingredient/views/ingredient/editIngredientForm.html',
+                    controller: 'ingredientEditController'
                 }
             }
         });
         $stateProvider.state('ingredientUnits', {
             parent: 'ingredients',
-            url: '/units',
+            url: '/units/',
             views: {
                 'content@': {
                     templateUrl: 'js/ingredient/views/ingredientUnit/ingredientUnit.html',
@@ -34,7 +44,7 @@ angular.module('whatsForDinnerApp.ingredient')
         });
         $stateProvider.state('addIngredientUnit', {
             parent: 'ingredientUnits',
-            url: '/add',
+            url: 'add',
             views: {
                 'content@': {
                     templateUrl: 'js/ingredient/views/ingredientUnit/newIngredientUnitForm.html',
@@ -44,7 +54,7 @@ angular.module('whatsForDinnerApp.ingredient')
         });
         $stateProvider.state('editIngredientUnit', {
             parent: 'ingredientUnits',
-            url: '/:id',
+            url: ':id',
             views: {
                 'content@': {
                     templateUrl: 'js/ingredient/views/ingredientUnit/editIngredientUnitForm.html',

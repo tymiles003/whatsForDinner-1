@@ -40,6 +40,12 @@ angular.module('whatsForDinnerApp.ingredient')
                 $scope.numPerPage = paginationService.numPerPage;
                 $scope.maxSize = paginationService.maxSize;
                 $scope.allIngredientUnits = result;
+                if ($scope.totalIngredientUnits > $scope.numPerPage) {
+                    $scope.showPagination = true;
+                } else {
+                    $scope.showPagination = false;
+                }
+
                 $scope.$watch('currentPage + numPerPage', function() {
                     var begin = (($scope.currentPage - 1) * $scope.numPerPage);
                     var end = begin + $scope.numPerPage;

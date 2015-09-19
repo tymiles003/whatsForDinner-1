@@ -1,4 +1,4 @@
-package org.home.whatsfordinner.domain.ingredient;
+package org.home.whatsfordinner.domain.ingredientUnit;
 
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.home.whatsfordinner.domain.BaseEntity;

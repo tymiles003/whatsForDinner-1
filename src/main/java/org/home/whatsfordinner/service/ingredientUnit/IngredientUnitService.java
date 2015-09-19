@@ -1,8 +1,8 @@
-package org.home.whatsfordinner.service.ingredient;
+package org.home.whatsfordinner.service.ingredientUnit;
 
-import org.home.whatsfordinner.domain.ingredient.IngredientUnit;
+import org.home.whatsfordinner.domain.ingredientUnit.IngredientUnit;
 import org.home.whatsfordinner.helper.ingredient.IngredientUnitHelper;
-import org.home.whatsfordinner.repository.ingredient.IngredientUnitRepository;
+import org.home.whatsfordinner.repository.ingredientUnit.IngredientUnitRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -58,13 +58,8 @@ public class IngredientUnitService {
      * @throws EntityNotFoundException when the ingredientUnit with id is not found
      */
     public IngredientUnit updateIngredientUnit(final Long id, final IngredientUnit newIngredientUnit) {
-        System.out.println("--------------------------------------------------- " + id);
-        System.out.println(newIngredientUnit.getName());
-        System.out.println(newIngredientUnit.getId());
         final IngredientUnit ingredientUnit = getIngredientUnit(id);
         final IngredientUnit updatedIngredientUnit = IngredientUnitHelper.updateIngredientUnit(ingredientUnit, newIngredientUnit);
-        System.out.println(updatedIngredientUnit.getName());
-        System.out.println(updatedIngredientUnit.getId());
         return ingredientUnitRepository.saveAndFlush(updatedIngredientUnit);
     }
 
@@ -74,7 +69,7 @@ public class IngredientUnitService {
      * @param id
      * @throws EntityNotFoundException when the ingredientUnit with id is not found
      */
-    public void deleteIngredientUnit(Long id) {
+    public void deleteIngredientUnit(final Long id) {
         final IngredientUnit ingredientUnit = getIngredientUnit(id);
         ingredientUnitRepository.delete(ingredientUnit);
     }

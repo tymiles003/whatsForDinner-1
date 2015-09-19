@@ -3,7 +3,7 @@ package org.home.whatsfordinner.domain.dish;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.home.whatsfordinner.domain.BaseEntity;
 import org.home.whatsfordinner.domain.ingredient.Ingredient;
-import org.home.whatsfordinner.domain.ingredient.IngredientUnit;
+import org.home.whatsfordinner.domain.ingredientUnit.IngredientUnit;
 
 import javax.persistence.*;
 

@@ -1,9 +1,7 @@
 package org.home.whatsfordinner.controller.ingredient;
 
 import org.home.whatsfordinner.domain.ingredient.Ingredient;
-import org.home.whatsfordinner.domain.ingredient.IngredientUnit;
 import org.home.whatsfordinner.service.ingredient.IngredientService;
-import org.home.whatsfordinner.service.ingredient.IngredientUnitService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -19,8 +17,6 @@ public class IngredientController {
 
     @Autowired
     private IngredientService ingredientService;
-    @Autowired
-    private IngredientUnitService ingredientUnitService;
 
     @RequestMapping(method = RequestMethod.GET)
     public List<Ingredient> getAllIngredients() {
@@ -32,29 +28,18 @@ public class IngredientController {
         return ingredientService.saveIngredient(ingredient);
     }
 
-    @RequestMapping(value = "/units", method = RequestMethod.GET)
-    public List<IngredientUnit> getAllIngredientUnits() {
-        return ingredientUnitService.getAllIngredientUnits();
+    @RequestMapping(value = "/{id}", method = RequestMethod.GET)
+    public Ingredient getIngredientUnit(@PathVariable(value = "id") final Long id) {
+        return ingredientService.getIngredient(id);
     }
 
-    @RequestMapping(value = "/units", method = RequestMethod.POST)
-    public IngredientUnit addIngredientUnit(@RequestBody final IngredientUnit ingredientUnit) {
-        return ingredientUnitService.saveIngredientUnit(ingredientUnit);
+    @RequestMapping(value = "/{id}", method = RequestMethod.PUT)
+    public void editIngredientUnit(@RequestBody final Ingredient ingredient, @PathVariable(value = "id") final Long id) {
+        ingredientService.updateIngredient(id, ingredient);
     }
 
-    @RequestMapping(value = "/units/{id}", method = RequestMethod.GET)
-    public IngredientUnit getIngredientUnit(@PathVariable(value = "id") final Long id) {
-        return ingredientUnitService.getIngredientUnit(id);
-    }
-
-    @RequestMapping(value = "/units/{id}", method = RequestMethod.PUT)
-    public void editIngredientUnit(@RequestBody final IngredientUnit ingredientUnit, @PathVariable(value = "id") final Long id) {
-        ingredientUnitService.updateIngredientUnit(id, ingredientUnit);
-    }
-
-    @RequestMapping(value = "/units/{id}", method = RequestMethod.DELETE)
+    @RequestMapping(value = "/{id}", method = RequestMethod.DELETE)
     public void deleteIngredientUnit(@PathVariable(value = "id") final Long id) {
-        ingredientUnitService.deleteIngredientUnit(id);
+        ingredientService.deleteIngredient(id);
     }
-
 }

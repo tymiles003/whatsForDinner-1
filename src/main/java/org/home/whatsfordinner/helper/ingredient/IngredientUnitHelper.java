@@ -1,7 +1,7 @@
 package org.home.whatsfordinner.helper.ingredient;
 
 import org.apache.commons.lang3.StringUtils;
-import org.home.whatsfordinner.domain.ingredient.IngredientUnit;
+import org.home.whatsfordinner.domain.ingredientUnit.IngredientUnit;
 
 public class IngredientUnitHelper {
 

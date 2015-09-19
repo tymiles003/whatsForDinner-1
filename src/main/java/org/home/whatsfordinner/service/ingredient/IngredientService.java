@@ -84,4 +84,15 @@ public class IngredientService {
     public List<Ingredient> searchIngredient(final String searchValue) {
         return ingredientRepository.searchByValue(searchValue);
     }
+
+    /**
+     * Delete the ingredient with id id
+     *
+     * @param id
+     * @throws EntityNotFoundException when the ingredient with id is not found
+     */
+    public void deleteIngredient(final Long id) {
+        final Ingredient ingredient = getIngredient(id);
+        ingredientRepository.delete(ingredient);
+    }
 }

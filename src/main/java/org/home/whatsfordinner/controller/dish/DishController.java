@@ -24,8 +24,7 @@ public class DishController {
 
     @RequestMapping(method = RequestMethod.POST)
     public Dish addDish(@RequestBody final Dish dish) {
-        System.out.println(dish.getName());
-        return dish;
+        return dishService.saveDish(dish);
     }
 
 }

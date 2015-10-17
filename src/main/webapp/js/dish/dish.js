@@ -18,7 +18,7 @@ angular.module('whatsForDinnerApp.dish')
             views: {
                 'content@': {
                     templateUrl: 'js/dish/views/newDishForm.html',
-                    controller: 'dishController'
+                    controller: 'dishCreateController'
                 }
             }
         });

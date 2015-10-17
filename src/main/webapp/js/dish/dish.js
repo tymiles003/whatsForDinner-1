@@ -22,4 +22,14 @@ angular.module('whatsForDinnerApp.dish')
                 }
             }
         });
+        $stateProvider.state('editDish', {
+            parent: 'dishes',
+            url: '/:id',
+            views: {
+                'content@': {
+                    templateUrl: 'js/dish/views/editDishForm.html',
+                    controller: 'dishEditController'
+                }
+            }
+        });
 });

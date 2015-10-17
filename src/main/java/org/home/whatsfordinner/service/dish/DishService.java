@@ -120,5 +120,15 @@ public class DishService {
     public List<Dish> getRandomDishes(final int nrOfDishes, final List<Long> dishIdsToIgnore) {
         return dishRepository.getRandomDishes(dishIdsToIgnore, new PageRequest(0, nrOfDishes));
     }
+
+    /**
+     * Delete the dish with id id
+     * @param id
+     * @throws EntityNotFoundException when the dish with id is not found
+     */
+    public void deleteDish(final Long id) {
+        final Dish dish = getDish(id);
+        dishRepository.delete(dish);
+    }
 }
 

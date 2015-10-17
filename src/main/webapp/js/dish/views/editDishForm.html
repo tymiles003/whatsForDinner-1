@@ -1,0 +1,4 @@
+<h1 class="page-header">Edit Dish</h1>
+<form name="form" novalidate class="form-horizontal" ng-submit="form.$valid && editDish()" ng-init="loadDish()">
+    <div ng-include src="'js/dish/views/dishForm.html'" ng-model="dish"></div>
+</form>

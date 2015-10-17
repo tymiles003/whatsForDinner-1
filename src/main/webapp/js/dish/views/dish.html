@@ -14,6 +14,10 @@
                 <td>{{ dish.name }}</td>
                 <td>{{ dish.creationDate | date: dateTimeFormat }}</td>
                 <td>{{ dish.lastModifiedDate | date: dateTimeFormat }}</td>
+                <td>
+                    <a class="link--text table__actions__item" role="button" ui-sref="editDish({id: dish.id})"><i class="glyphicon glyphicon-edit" aria-hidden="true"></i> Edit</a>
+                    <a class="link--text link--danger table__actions__item" role="button" ng-click="deleteDishModal(dish.id)"><i class="glyphicon glyphicon-remove" aria-hidden="true"></i> Delete</a>
+                </td>
             </tr>
             </tbody>
         </table>

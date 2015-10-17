@@ -10,17 +10,17 @@ angular.module('whatsForDinnerApp.ingredient')
             addIngredient: {
                 method: 'POST'
             },
-             getIngredient: {
-                 method: 'GET',
-                 params: { id: "@id"}
-             },
-             editIngredient: {
-                 method: 'PUT',
-                 params: { id: "@id"}
-             },
-             deleteIngredient: {
-                 method: 'DELETE',
-                 params: { id: "@id"}
-             }
+            getIngredient: {
+                method: 'GET',
+                params: { id: "@id"}
+            },
+            editIngredient: {
+                method: 'PUT',
+                params: { id: "@id"}
+            },
+            deleteIngredient: {
+                method: 'DELETE',
+                params: { id: "@id"}
+            }
         });
     }]);

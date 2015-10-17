@@ -4,7 +4,7 @@ angular.module('whatsForDinnerApp.dish')
     .controller('dishCreateController', ['$scope', '$state', 'dishResourceFactory', 'Flash',
         function ($scope, $state, dishResourceFactory, Flash) {
             $scope.dish = {};
-            
+
             $scope.addDish = function() {
                 dishResourceFactory.addDish($scope.dish, function(result) {
                     var message = "<strong>Success!</strong> The dish was successfully added.";
